@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "fd3a5f35-2015-41bd-890d-3576b5743291",
+		"name": "Control De Alumnos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login Maestro-Alumno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"dmontenegro@gmail.com\" ,\r\n    \"password\": \"daniel123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Usuario-Maestro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/usuarios/mostrar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"mostrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Usuario-Maestro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Daniel Montenegro\",\r\n    \"correo\": \"dmontenegro@gmail.com\",\r\n    \"password\": \"daniel123\",\r\n    \"rol\": \"ROLE_ALUMNO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuarios/agregar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Usuario-Maestro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Daniel Montenegro\",\r\n    \"correo\": \"danielmontenegro@gmail.com\",\r\n    \"password\": \"daniel123\",\r\n    \"rol\": \"ROLE_ALUMNO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuarios/editar/63f6abd21416bb27a50ab817",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"editar",
+						"63f6abd21416bb27a50ab817"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Usuario-Maestro",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y2YWJkMjE0MTZiYjI3YTUwYWI4MTciLCJpYXQiOjE2NzcxMTAyOTcsImV4cCI6MTY3NzEyODI5N30.AL6ulCdkb--uuxRTWVaot5k9VUOAsB-I0coRwzzI3nI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/usuarios/eliminar/63f6abd21416bb27a50ab817",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"eliminar",
+						"63f6abd21416bb27a50ab817"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Curso-Maestro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/cursos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Curso-Maestro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZjYjc4ZmZiNzY3NjFmMDE3NWYyNGMiLCJpYXQiOjE2Nzc1MDY0NzYsImV4cCI6MTY3NzUyNDQ3Nn0.IfzA5e8gnNHdezf_dV2SqtF6uE3VbCrNmUN5gwz-k1w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Informática\",\r\n    \"usuario\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cursos/agregar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Curso-Maestro",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y2YWJkMjE0MTZiYjI3YTUwYWI4MTciLCJpYXQiOjE2NzcxMTAyOTcsImV4cCI6MTY3NzEyODI5N30.AL6ulCdkb--uuxRTWVaot5k9VUOAsB-I0coRwzzI3nI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Inglés\",\r\n    \"usuario\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/cursos/editar/63f6ad791416bb27a50ab821",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos",
+						"editar",
+						"63f6ad791416bb27a50ab821"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Curso-Maestro",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2Y2YWJkMjE0MTZiYjI3YTUwYWI4MTciLCJpYXQiOjE2NzcxMTAyOTcsImV4cCI6MTY3NzEyODI5N30.AL6ulCdkb--uuxRTWVaot5k9VUOAsB-I0coRwzzI3nI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/cursos/eliminar/63f6ad791416bb27a50ab821",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cursos",
+						"eliminar",
+						"63f6ad791416bb27a50ab821"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Asignarse-Alumnos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/asignaciones",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"asignaciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Asignarse-Alumnos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZjYjk5OWZiNzY3NjFmMDE3NWYyNTkiLCJpYXQiOjE2Nzc1MDcwMzUsImV4cCI6MTY3NzUyNTAzNX0.8RmI2SyfCcTPlEKTIV7YOE1uIanEdYXrWwP3UNmwwuw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Asign\",\r\n    \"curso\":\"63fcb81bfb76761f0175f252\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/asignaciones/agregar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"asignaciones",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Asignarse-Alumnos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/asignaciones/editar/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"asignaciones",
+						"editar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Asignarse-Alumnos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/asignaciones/eliminar/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"asignaciones",
+						"eliminar",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
